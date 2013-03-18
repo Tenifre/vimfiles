@@ -170,5 +170,4 @@ imap () ()<Left>
 imap "" ""<Left>
 imap '' ''<Left>
 imap <> <><Left>
-imap // //<left>
 imap ** **<left>

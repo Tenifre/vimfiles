@@ -62,6 +62,8 @@ function! s:LoadBundles()
   NeoBundle 'yuratomo/gmail.vim'
   NeoBundle 'scrooloose/syntastic'
   NeoBundle 'modsound/gips-vim'
+  NeoBundle 'Jinja'
+  NeoBundle 'ocim/htmljinja.vim'
 
   " solarized カラースキーム
   NeoBundle 'altercation/vim-colors-solarized'
@@ -172,4 +174,8 @@ imap '' ''<Left>
 imap <> <><Left>
 imap ** **<left>
 
+" 最後の編集位置でファイルを開く
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" Twig
+autocmd BufNewFile,BufRead *.twig set filetype=htmljinja

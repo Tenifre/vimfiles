@@ -171,3 +171,5 @@ imap "" ""<Left>
 imap '' ''<Left>
 imap <> <><Left>
 imap ** **<left>
+
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif

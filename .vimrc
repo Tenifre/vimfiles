@@ -178,4 +178,5 @@ imap ** **<left>
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " Twig
-autocmd BufNewFile,BufRead *.twig set filetype=htmljinja
+autocmd BufNewFile,BufRead *.html.twig set filetype=htmljinja
+autocmd BufNewFile,BufRead *.js.twig set filetype=javascript
